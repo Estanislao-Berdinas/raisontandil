@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Raison Tandil | Contacto </title>
+</head>
+
+<body>
+
+    <header>
+        <div class="barra">
+            <img src="../images/raisonlogo.jpeg" alt="Raison Tandil" width="100px" height="100px">
+
+            <nav>
+
+                <ul class="navbar">
+                    <li> <a href="../index.html"> Inicio </a> </li>
+                    <li> <a href="../views/novedades.html"> Novedades</a> </li>
+                    <li> <a href="../views/ofertas.html"> Ofertas </a> </li>
+                    <li> <a href="../views/categorias.html"> Categorías</a> </li>
+                    <li> <a href="../views/contacto.html"> Contacto </a> </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+    <main>
+
+        <h1> Contactese con nosotros para tener mas información sobre productos, precios y novedades</h1>
+        <form id="form">
+            <label for="name">Ingrese su nombre:</label>
+            <input type="text" name="nombre" placeholder="Ejemplo: Juan" id="nombre" required> <br><br>
+
+            <label for="email">Ingrese su email:</label>
+            <input type="email" name="correo" placeholder="ejemplo@email.com" id="correo" required><br><br>
+
+            <label for="mensaje">Deje su consulta aquí</label> <br>
+            <textarea name="mensaje" cols="30" rows="10" placeholder="Ejemplo: Quisiera saber mas sobre el producto"
+                id='mensaje' required></textarea><br><br>
+
+            <input type="submit" id="button" value="Enviar mensaje">
+
+
+
+        </form>
+        <div class="instarai">
+            <label for="contacto">
+                Hacé click para ver nuestro Instagram
+            </label> <br> <br>
+            <a href="http://www.instagram.com/raisonparatuhogar"> <img src="../images/instalogo.png" alt=""> </a>
+        </div>
+    </main>
+
+    <footer class="piepagina">
+        <p>® Raison Tandil es una marca registrada</p> <br>
+
+        <h3>Sobre nosotros</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quia libero, sint ab autem voluptatem
+            quibusdam dolorum aspernatur. Ut sapiente voluptatibus numquam, culpa tenetur, ad obcaecati quaerat officiis
+            dolorem ipsa impedit saepe deleniti vero aspernatur quod dolor natus error eum, necessitatibus odio.
+            Temporibus maxime numquam dolor, deserunt nemo reprehenderit perspiciatis?</p> <br>
+        <p>
+            Creado por Estanislao Berdiñas
+        </p>
+
+        <p> Estudiante de <a href="http://www.coderhouse.com/"> Coderhouse</a></p>
+
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('user_Inpk1uohyLQj7cSRHr0Cq')
+    </script>
+
+    <script>
+        const btn = document.getElementById('button');
+        const nombre = document.getElementById('nombre');
+        const correo = document.getElementById('correo');
+        const mensaje = document.getElementById('mensaje')
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Enviando...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_os86zmg';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Enviar mensaje';
+                        alert('Gracias por contactarnos, pronto nos comunicaremos con usted.');
+                        nombre.value = '';
+                        correo.value = '';
+                        mensaje.value = '';
+                    }, (err) => {
+                        btn.value = 'Enviar mensaje';
+                        alert(JSON.stringify(err));
+                    });
+            });
+    </script>
+</body>
+
+</html>

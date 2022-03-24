@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+
+body {
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+.barra {
+    background-color: rgba(189, 55, 55, 0.733);
+    width: 80%;
+    height: 100px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+
+
+}
+
+nav ul {
+    padding-top: 40px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 15px;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+h1 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border: 1px;
+    padding: 5px;
+}
+
+h2 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.enOferta {
+    background-color: antiquewhite;
+    border: 3px solid black;
+    padding: 5px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.enOferta img {
+    width: 180px;
+
+    height: 100%;
+}
+
+
+.bloquefotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "fotouno fotodos ofertaweb"
+        "fototres fotocuatro contactanos";
+    gap: 30px;
+    justify-content: center;
+    margin: 30px;
+    margin-left: 50px;
+}
+
+.bloquefotos h2 {
+    text-align: start;
+}
+
+.bloquefotos img {
+    width: 100%;
+    height: 300px;
+}
+
+.fotouno {
+    grid-area: fotouno;
+    width: 100%;
+    height: 300px;
+}
+
+.fotodos {
+    grid-area: fotodos;
+    padding-top: 29px;
+    width: 100%;
+    height: 300px;
+}
+
+.fototres {
+    grid-area: fototres;
+    padding-top: 29px;
+    width: 100%;
+    height: 300px;
+}
+
+.fotocuatro {
+    grid-area: fotocuatro;
+    padding-top: 29px;
+    width: 100%;
+    height: 300px;
+}
+
+.ofertaweb {
+    grid-area: ofertaweb;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 29px
+}
+
+.contactanos {
+    grid-area: contactanos;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 29px;
+}
+
+footer {
+    background-color: antiquewhite;
+    border: 5px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    color: black;
+    font-weight: bold;
+
+}
+
+.novedadespadre {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "novedadesuno novedadesdos novedadestres"
+        "novedadescuatro novedadescinco novedadesseis";
+    margin: 30px;
+    gap: 15px;
+}
+
+.novedadesuno img {
+    grid-area: novedadesuno;
+    width: 100%;
+    height: 300px;
+}
+
+.novedadesdos img {
+    grid-area: novedadesdos;
+    width: 100%;
+    height: 300px;
+}
+
+.novedadestres img {
+    grid-area: novedadestres;
+    width: 100%;
+    height: 300px;
+}
+
+.novedadescuatro img {
+    grid-area: novedadescuatro;
+    width: 100%;
+    height: 300px;
+}
+
+.novedadescinco img {
+    grid-area: novedadescinco;
+    width: 100%;
+    height: 300px;
+}
+
+.novedadesseis img {
+    grid-area: novedadesseis;
+    width: 100%;
+    height: 300px;
+}
+
+.ofertaspadre {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.ofertaspadre img {
+    width: 100%;
+    height: 500px;
+    padding-top: 15px;
+}
+
+
+.categoriaspadre {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "decouno decodos decotres decocuatro decocinco"
+        "hogaruno hogardos hogartres hogarcuatro hogarcinco"
+        "jardinuno jardindos jardintres jardincuatro jardincinco";
+    margin: 30px;
+    gap: 15px;
+}
+
+.decouno img {
+    grid-area: decouno;
+    width: 100%;
+    height: 200px;
+    padding-bottom: 29px;
+}
+
+.decodos img {
+    grid-area: decodos;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.decotres img {
+    grid-area: decotres;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.decocuatro img {
+    grid-area: decocuatro;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.decocinco img {
+    grid-area: decocinco;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.hogaruno img {
+    grid-area: hogaruno;
+    width: 100%;
+    height: 200px;
+    padding-bottom: 29px;
+}
+
+.hogardos img {
+    grid-area: hogardos;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.hogartres img {
+    grid-area: hogartres;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.hogarcuatro img {
+    grid-area: hogarcuatro;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.hogarcinco img {
+    grid-area: hogarcinco;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.jardinuno img {
+    grid-area: jardinuno;
+    width: 100%;
+    height: 200px;
+    padding-bottom: 29px;
+}
+
+.jardindos img {
+    grid-area: jardindos;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.jardintres img {
+    grid-area: jardintres;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.jardincuatro img {
+    grid-area: jardincuatro;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.jardincinco img {
+    grid-area: jardincinco;
+    width: 100%;
+    height: 200px;
+    padding-top: 29px;
+}
+
+.contactarnos {
+    padding: 5px;
+    margin: 30px;
+
+}
+
+#form {
+    text-align: center;
+    padding: 5px;
+    margin: 30px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.instarai {
+    padding: 5px;
+    margin: 30px;
+    text-align: center;
+
+}
+
+.instarai img {
+    width: 300px;
+    height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .barra img {
+        height: auto;
+    }
+
+    .barra {
+        width: 90%;
+    }
+
+    nav ul {
+        display: flex;
+        align-content: stretch;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 0px;
+    }
+
+    /* la idea es que haya una sola foto que corra en carrusel para la version responsive */
+    .enOferta img {
+        width: 100%;
+
+        height: 300px;
+    }
+
+    .bloquefotos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "fotouno fotodos"
+            "fototres fotocuatro"
+            "ofertaweb contactanos";
+        gap: 29px;
+        justify-content: center;
+        margin: 30px;
+    }
+
+    .bloquefotos img {
+        height: 150px;
+    }
+
+    .fotouno {
+        height: 150px;
+    }
+
+    .bloquefotos h2 {
+        font-size: 14px;
+    }
+
+    .fotodos {
+        height: 150px;
+        padding-top: 17px;
+    }
+
+    .fototres {
+        height: 150px;
+        padding-top: 17px;
+    }
+
+    .fotocuatro {
+        height: 150px;
+        padding-top: 17px;
+    }
+
+    .ofertaweb {
+        height: 150px;
+    }
+
+    .contactanos {
+        height: 150px;
+    }
+
+    footer {
+        border: 0px;
+        padding: 0px;
+        margin: 15px;
+        font-size: 14px;
+    }
+
+
+    .novedadespadre {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "novedadesuno novedadesdos"
+            "novedadestres novedadescuatro"
+            "novedadescinco novedadesseis";
+    }
+
+    .novedadesuno img {
+        height: 150px;
+    }
+
+    .novedadesdos img {
+        height: 150px;
+    }
+
+    .novedadestres img {
+        height: 150px;
+    }
+
+    .novedadescuatro img {
+        height: 150px;
+    }
+
+    .novedadescinco img {
+        height: 150px;
+    }
+
+    .novedadesseis img {
+        height: 150px;
+    }
+
+    .ofertaspadre {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ofertaspadre img {
+        height: max-content;
+        margin: auto;
+    }
+
+    .categoriaspadre {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
